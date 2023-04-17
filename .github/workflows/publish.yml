@@ -29,8 +29,12 @@ jobs:
       - run: npm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.AUTH_TOKEN_FOR_GITHUBPKG }} # for npm private registry
-      - name: publish articles
+      - name: get diff
+        id: diff
         run: |
-          git diff --name-only HEAD~ ':./public/*.md' ':(exclude)./public/remote/*' | xargs basename -s '.md'
+          echo "::set-output name=changed::$(git diff --name-only HEAD~ ':./public/*.md' ':(exclude)./public/remote/*' | xargs basename -s '.md')"
+      - name: publish article
+        if: ${{ steps.diff.outputs.changed != '' }}
+        run: echo ${{ steps.diff.outputs.changed }}
       # - name: commit diffs
       #   run: find ./tmp -name '*.md' -not -path "${QIITA_CLI_ITEMS_ROOT}/public/remote/*.md"
