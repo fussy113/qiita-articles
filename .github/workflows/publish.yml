@@ -1,0 +1,30 @@
+name: Publish articles
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish_articles:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      QIITA_TOKEN: ${{ secrets.QIITA_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18.14.0"
+          registry-url: "https://npm.pkg.github.com"
+      - run: yarn install
+      # - name: publish articles
+      #   run: yarn run qiita help # TODO: publish
+      # - name: commit diffs
+      #   run: find ./tmp -name '*.md' -not -path "${QIITA_CLI_ITEMS_ROOT}/public/remote/*.md"
