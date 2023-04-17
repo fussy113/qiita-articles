@@ -1,0 +1,20 @@
+{
+  "name": "qiita-articles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preview": "npx qiita preview",
+    "lint:md": "npx markdownlint-cli2 --config \".markdownlint-cli2.jsonc\" public/*",
+    "lint:md:fix": "npx markdownlint-cli2 --fix --config \".markdownlint-cli2.jsonc\" public/*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "markdownlint-cli2": "^0.8.1"
+  },
+  "devDependencies": {
+    "@qiita/qiita-cli": "^0.3.0"
+  }
+}
