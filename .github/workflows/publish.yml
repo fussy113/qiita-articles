@@ -27,7 +27,8 @@ jobs:
       - run: npm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.AUTH_TOKEN_FOR_GITHUBPKG }} # for npm private registry
-      # - name: publish articles
-      #   run: yarn run qiita help # TODO: publish
+      - name: publish articles
+        run: |
+          find ./public -name *.md -not -path "./public/remote/*" | xargs basename -s .md
       # - name: commit diffs
       #   run: find ./tmp -name '*.md' -not -path "${QIITA_CLI_ITEMS_ROOT}/public/remote/*.md"
