@@ -1,6 +1,9 @@
 name: Publish articles
 
 on:
+  push:
+    branches:
+      - master
   workflow_dispatch:
 
 permissions:
@@ -37,6 +40,7 @@ jobs:
         env:
           QIITA_TOKEN: ${{ secrets.QIITA_TOKEN }}
       - name: commit diff
+        if: ${{ steps.diff.outputs.changed != '' }}
         run: |
           git add public/*
           if ! git diff --staged --exit-code --quiet
