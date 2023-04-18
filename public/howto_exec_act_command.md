@@ -1,5 +1,5 @@
 ---
-title: newArticle001
+title: actコマンドの使い方
 tags:
   - act
   - GitHubActions
