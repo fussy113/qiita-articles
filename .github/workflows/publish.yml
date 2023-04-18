@@ -4,8 +4,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  packages: write
+  contents: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -15,8 +14,7 @@ jobs:
   publish_articles:
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    env:
-      QIITA_TOKEN: ${{ secrets.QIITA_TOKEN }}
+    if: github.actor != 'GitHub Action'
     steps:
       - uses: actions/checkout@v3
         with:
@@ -29,12 +27,22 @@ jobs:
       - run: npm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.AUTH_TOKEN_FOR_GITHUBPKG }} # for npm private registry
-      - name: get diff
+      - name: get diff and set output
         id: diff
         run: |
-          echo "::set-output name=changed::$(git diff --name-only HEAD~ ':./public/*.md' ':(exclude)./public/remote/*' | xargs basename -s '.md')"
+          echo "changed=$(git diff --name-only HEAD~ ':./public/*.md' ':(exclude)./public/remote/*' | xargs basename -s '.md')" >> $GITHUB_OUTPUT
       - name: publish article
         if: ${{ steps.diff.outputs.changed != '' }}
-        run: echo ${{ steps.diff.outputs.changed }}
-      # - name: commit diffs
-      #   run: find ./tmp -name '*.md' -not -path "${QIITA_CLI_ITEMS_ROOT}/public/remote/*.md"
+        run: npm exec qiita publish ${{ steps.diff.outputs.changed }}
+        env:
+          QIITA_TOKEN: ${{ secrets.QIITA_TOKEN }}
+      - name: commit diff
+        run: |
+          git add public/*
+          if ! git diff --staged --exit-code --quiet
+          then
+            git config --local user.name "GitHub Action"
+            git config --local user.email "action@github.com"
+            git commit -m "updated by qiita-cli"
+            git push
+          fi
