@@ -1,8 +1,10 @@
+# Please set environment variables 'QIITA_TOKEN' and 'AUTH_TOKEN_FOR_GITHUBPKG' from your repository
 name: Publish articles
 
 on:
   push:
     branches:
+      - main
       - master
   workflow_dispatch:
 
@@ -33,7 +35,7 @@ jobs:
       - name: get diff and set output
         id: diff
         run: |
-          echo "changed=$(git diff --name-only HEAD~ ':./public/*.md' ':(exclude)./public/remote/*' | xargs basename -s '.md')" >> $GITHUB_OUTPUT
+          echo "changed=$(git diff --name-only --diff-filter=d HEAD~ ':./public/*.md' ':(exclude)./public/remote/*' | xargs basename -s '.md')" >> $GITHUB_OUTPUT
       - name: publish article
         if: ${{ steps.diff.outputs.changed != '' }}
         run: npm exec qiita publish ${{ steps.diff.outputs.changed }}
@@ -47,6 +49,6 @@ jobs:
           then
             git config --local user.name "actions-user"
             git config --local user.email "action@github.com"
-            git commit -m "updated by qiita-cli"
+            git commit -m "Updated by qiita-cli"
             git push
           fi
