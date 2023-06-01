@@ -1,3 +1,5 @@
+node_modules
 .env
 .npmrc
-node_modules
+.nvmrc
+.remote
