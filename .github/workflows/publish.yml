@@ -32,17 +32,11 @@ jobs:
       - run: npm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.AUTH_TOKEN_FOR_GITHUBPKG }} # for npm private registry
-      - name: get diff and set output
-        id: diff
-        run: |
-          echo "changed=$(git diff --name-only --diff-filter=d HEAD~ ':./public/*.md' ':(exclude)./public/remote/*' | xargs basename -s '.md')" >> $GITHUB_OUTPUT
       - name: publish article
-        if: ${{ steps.diff.outputs.changed != '' }}
-        run: npm exec qiita publish ${{ steps.diff.outputs.changed }}
+        run: npm exec qiita publish -- --all
         env:
           QIITA_TOKEN: ${{ secrets.QIITA_TOKEN }}
       - name: commit diff
-        if: ${{ steps.diff.outputs.changed != '' }}
         run: |
           git add public/*
           if ! git diff --staged --exit-code --quiet
