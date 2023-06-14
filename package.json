@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@increments/qiita-cli": "^0.0.17-dev"
+    "@increments/qiita-cli": "^0.0.18"
   }
 }
