@@ -24,7 +24,25 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: increments/qiita-cli/actions/publish@main
+      - uses: actions/setup-node@v3
         with:
-          qiita-token: ${{ secrets.QIITA_TOKEN }}
-          node-auth-token: ${{ secrets.AUTH_TOKEN_FOR_GITHUBPKG }} # TODO: For private package repository
+          node-version: "18.14.0"
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@increments" # for npm private registry
+      - run: npm install
+        env:
+          NODE_AUTH_TOKEN: \${{ secrets.AUTH_TOKEN_FOR_GITHUBPKG }} # for npm private registry
+      - name: publish article
+        run: npm exec qiita publish -- --all
+        env:
+          QIITA_TOKEN: \${{ secrets.QIITA_TOKEN }}
+      - name: commit diff
+        run: |
+          git add public/*
+          if ! git diff --staged --exit-code --quiet
+          then
+            git config --local user.name "actions-user"
+            git config --local user.email "action@github.com"
+            git commit -m "Updated by qiita-cli"
+            git push
+          fi
