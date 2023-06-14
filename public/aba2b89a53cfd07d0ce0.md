@@ -4,7 +4,7 @@ tags:
   - Vue.js
   - LIFF
 private: false
-updated_at: '2020-12-20T00:29:50+09:00'
+updated_at: '2023-06-15T00:51:32+09:00'
 id: aba2b89a53cfd07d0ce0
 organization_url_name: qiita-inc
 ---
@@ -15,6 +15,7 @@ vue-cli で作成したプロジェクトに対して、 npm パッケージか�
 ※ 筆者はmac osで開発してます。
 
 ## プロジェクトの作成
+
 とりあえず vue-cli で プロジェクトを作ってしまいます
 
 ```bash
@@ -34,6 +35,7 @@ yarn serve
 ![スクリーンショット 2020-12-19 23.53.59.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/166596/43e0df38-da06-7705-fdd1-0ccc8f7362eb.png)
 
 ## ngrok を使用する
+
 LIFF の利用のために,https でアプリを公開している必要があります。
 サーバーを用意する、S3などにあげるなどが勿論良いですが、今回は簡単にやるために ngrok を使用してローカルでたてた vue アプリを外部に公開する形をとります。
 
@@ -60,15 +62,16 @@ ngrok http 8080
 }
 ```
 
-## LINE Developers のページから LIFFアプリを登録する 
+## LINE Developers のページから LIFFアプリを登録する
+
 ![スクリーンショット 2020-12-20 0.14.49.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/166596/ca985a53-3ec2-51dd-414a-c597c020bb4f.png)
 
 作成すると、LIFF IDが発行されるので、こちらをメモっておきましょう。
 
 ![スクリーンショット 2020-12-20 0.16.57.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/166596/785f5c8f-f70f-4cca-9b88-72dbb8440ff3.png)
 
-
 ## LIFF をインストール、導入する
+
 LIFF をさっとインストールしちゃいましょう。
 
 ```bash

@@ -4,14 +4,15 @@ tags:
   - Rust
   - cargo
 private: false
-updated_at: '2022-12-21T07:00:21+09:00'
+updated_at: '2023-06-15T00:51:32+09:00'
 id: e42d2bd9af10c05bed8a
 organization_url_name: qiita-inc
 ---
 ## cargo コマンドとは
+
 - Rustのビルドシステム、パッケージマネージャー
-    - コードのビルド
-    - 依存パッケージのダウンロードなど管理
+  - コードのビルド
+  - 依存パッケージのダウンロードなど管理
 - パッケージ管理だけではなく、開発に必要なツールなどもcargo コマンドにまとまっている
 
 この記事では、cargo コマンドで可能な基本的な内容をまとめました。
@@ -19,6 +20,7 @@ organization_url_name: qiita-inc
 ## コマンド詳細
 
 ### `cargo help`
+
 まずは何がともあれ、helpを見てみます。
 
 ```
@@ -66,9 +68,11 @@ See 'cargo help <command>' for more information on a specific command.
 `(see all commands with --list)` と記載があるということは、まだまだできることがありそうです。
 
 ## cargo コマンドのオプション
+
 `common cargo commands` として表示されたサブコマンドをそれぞれ見ています。
 
 ## サブコマンド
+
 ### `cargo new`
 
 `cargo new $DIR_NAME`
@@ -77,15 +81,17 @@ Current Directoryでプロジェクトを作成しようとすると、エラー
 `cargo new .`
 
 ### `cargo init`
+
 `cargo new` でできなかった、Current Directoryでプロジェクトを作成することができる
 上書きかを選べる
 
 基本的にnew かinit、どちらかの使い分けになりそうです。
 
 ### `cargo build`
+
 - 初期設定では、`target` ディレクトリにコンパイルした後の実行可能なファイルが生成される
 - `Cargo.toml` に記載された外部パッケージがインストールされる
-    - このときインストールされたパッケージは、`Cargo.lock` に記載される
+  - このときインストールされたパッケージは、`Cargo.lock` に記載される
 
 ```
 $ cargo build
@@ -94,9 +100,10 @@ $ cargo build
 ```
 
 ### `cargo check`
+
 - `cargo build` との違いは、実行可能ファイルが生成されるか
 - こちらは生成されない、コンパイルが通るかの確認のみ
-    - 爆速でコンパイルの確認ができる
+  - 爆速でコンパイルの確認ができる
 
 ```
 $ cargo check
@@ -105,6 +112,7 @@ $ cargo check
 ```
 
 ### `cargo run`
+
 - `cargo build` ののち、実行可能なファイルが実行され、結果が出力される
 - build はrust のコードに変更がない場合はbuild はされず、実行可能なファイルが実行されるだけなので、爆速
 
@@ -117,6 +125,7 @@ Hello, World!!
 ```
 
 ### `cargo test`
+
 - build、テストが実行される
 
 ```
@@ -132,6 +141,7 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 ```
 
 ### `cargo bench`
+
 - ベンチマーク用にマークされた関数を実行する
 
 :::note warn
@@ -180,14 +190,15 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 2 measured; 0 filtered out; fini
 ```
 
 ### `cargo add`
+
 - crate を追加し、インストールを行う
-    - `Cargo.toml`、`Cargo.lock` が更新される
+  - `Cargo.toml`、`Cargo.lock` が更新される
 - 指定の仕方は大きく3つ
-    - publishされている crate名@version で指定する
-        - crate名のみだと、最新のバージョンがインストールされる
-    - path で指定する
-        - ローカルで作成したcrate を指定する際に利用
-    - GitHub のリポジトリのURLで指定する
+  - publishされている crate名@version で指定する
+    - crate名のみだと、最新のバージョンがインストールされる
+  - path で指定する
+    - ローカルで作成したcrate を指定する際に利用
+  - GitHub のリポジトリのURLで指定する
 - publishされているcrate は、https://crates.io/ で探すことができる
 - または、`cargo search` でも名前がわかっていれば探すことができる
 
@@ -213,9 +224,10 @@ $ cargo add rand@0.8.5
 ```
 
 ### `cargo search`
+
 - https://crates.io/ に公開されているcrateで検索にマッチするものを表示する
-    - 順番はおそらく、https://crates.io/ と同じで関連順とおもわれる
-    - デフォルトで10件、最大100件表示できる(オプション)
+  - 順番はおそらく、https://crates.io/ と同じで関連順とおもわれる
+  - デフォルトで10件、最大100件表示できる(オプション)
 
 ```
 $ cargo search rand
@@ -233,6 +245,7 @@ rand_core = "0.6.4"         # Core random number generator traits and tools for 
 ```
 
 ### `cargo doc`
+
 - doc を作成する
 - デフォルトは`target/doc` 配下に作成される
 - プロジェクトのドキュメントはもちろん、Installしている crate のドキュメントもまとまっている
@@ -242,6 +255,7 @@ rand_core = "0.6.4"         # Core random number generator traits and tools for 
 プロジェクトで使用している他のcrate なども参照ができて、とても便利ですね。
 
 ### `cargo publish`
+
 - 自身のプロジェクトをhttps://crates.io/ に公開する
 - dry-run で試すこともできる
 
@@ -259,12 +273,15 @@ warning: aborting upload due to dry run
 ```
 
 ### `cargo clean`
+
 - build で生成されたファイルが削除される
 
 ### `cargo install`
+
 - バイナリパッケージをインストールする際に使用
 
 ### `cargo uninstall`
+
 - `cargo install` されたパッケージをプロジェクトから削除する
 
 ヘルプに書いてある内容をまとめたが、 https://doc.rust-lang.org/cargo/reference/index.html にはまだまだコマンドがいっぱいある様子

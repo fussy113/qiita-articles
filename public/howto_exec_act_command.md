@@ -5,11 +5,12 @@ tags:
   - ACT
   - GitHubActions
 private: true
-updated_at: '2023-06-06T17:10:49+09:00'
+updated_at: '2023-06-15T00:51:32+09:00'
 id: 1311f4085f04540f532e
 organization_url_name: null
 ---
 ## 初めに
+
 この記事は、GitHub Actionsワークフローをローカル環境で実行する際に使用できる、[nektos/act](https://github.com/nektos/act)のインストール方法、簡単な使用方法をまとめた記事です。
 
 ## インストール方法

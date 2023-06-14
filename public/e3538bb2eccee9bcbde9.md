@@ -5,11 +5,12 @@ tags:
   - Jest
   - Next.js
 private: false
-updated_at: '2021-06-03T13:55:57+09:00'
+updated_at: '2023-06-15T00:51:33+09:00'
 id: e3538bb2eccee9bcbde9
 organization_url_name: qiita-inc
 ---
 ## これは何
+
 記事投稿イベント「3000文字Tips」の参加記事です。
 
 https://qiita.com/official-events/d523df99d6479293ffa7
@@ -28,11 +29,14 @@ Jest を使い始めて慣れて筆者は、久しぶりの RSpec で全部 `des
 https://github.com/facebook/jest/issues/2468
 
 ## 開発環境
+
 検証した環境です。
+
 - Next.js: 10.2.2
 - Jest: 26.6.3
 
 ## やり方
+
 ### context を定義する
 
 issue 内に書いてあるように、describe のエイリアスを context に設定します。

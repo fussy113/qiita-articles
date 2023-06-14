@@ -4,19 +4,22 @@ tags:
   - chrome-extension
   - SolidJS
 private: false
-updated_at: '2022-12-20T10:46:40+09:00'
+updated_at: '2023-06-15T00:51:33+09:00'
 id: f8b94def55dedef7c06a
 organization_url_name: qiita-inc
 ---
 ## モチベーション
+
 - Qiita で利用できそうなChrome拡張を作りたい
 - Vue、React などはChrome拡張を作るためのtemplate がある
 - SolidJS + vite でそれを構築できると、爆速で最高の開発体験を得られるのではと考えて実装を始めた。
 
 ## リポジトリ
+
 https://github.com/fussy113/solid-webext
 
 ## 構成
+
 - SolidJS
 - TypeScript
 - vite
