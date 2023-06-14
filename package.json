@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preview": "npx qiita preview",
+    "lint:md": "npx markdownlint-cli2 --config \".markdownlint-cli2.jsonc\" public/*",
+    "lint:md:fix": "npx markdownlint-cli2 --fix --config \".markdownlint-cli2.jsonc\" public/*"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@increments/qiita-cli": "^0.0.18"
+    "@increments/qiita-cli": "^0.0.18",
+    "markdownlint-cli2": "^0.8.1"
   }
 }
