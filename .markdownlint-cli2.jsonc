@@ -1,16 +1,12 @@
 {
   "config": {
-    "single-h1": false, // MD002: 複数のH1を許容
     "line-length": false, // MD013: 1文の最大文字数をはtextlintと競合するため無効化
     "no-duplicate-heading": false, // MD024: 見出し文字列の重複を許容
     "no-trailing-punctuation": false, // MD026: 見出しに.,;:が入ることを許容
-    "ol-prefix": false, // MD029: 番号付きリストの接頭辞を許容
+    // "ol-prefix": false, // MD029: 番号付きリストの接頭辞を許容
     "no-inline-html": false, // MD033: HTML記述を許容
     "no-bare-urls": false, // MD034: URLそのままの表記を許容
-    "no-emphasis-as-heading": false, // MD036: 強調表現を見出しにしない
-    "no-emphasis-as-header": false, // MD037: 強調表現を見出しにしない
-    "fenced-code-language": false, // MD040: コードブロックの言語指定を許容
-    "single-title": false // MD041: 複数の見出しを許容
+    "fenced-code-language": false // MD040: コードブロックの言語指定を許容
   },
   "ignores": ["node_modules", "public/.remote/*"]
 }
