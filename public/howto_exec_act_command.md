@@ -1,11 +1,11 @@
 ---
 title: actコマンドの使い方
 tags:
-  - act
-  - GitHubActions
   - Docker
+  - ACT
+  - GitHubActions
 private: true
-updated_at: 'Mon Apr 01 2024 00:00:00 GMT+0900 (日本標準時)'
+updated_at: '2023-06-06T17:10:49+09:00'
 id: 1311f4085f04540f532e
 organization_url_name: null
 ---
