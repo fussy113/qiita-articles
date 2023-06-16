@@ -1,12 +1,12 @@
 ---
 title: markdownlint-cli2を利用してローカル環境でMarkdownの文法チェックを行う
 tags:
-  - 'markdownlint'
-  - 'markdownlint-cli2'
-  - 'markdown'
+  - Markdown
+  - markdownlint
+  - markdownlint-cli2
 private: true
-updated_at: ''
-id: null
+updated_at: '2023-06-16T12:36:08+09:00'
+id: 1537dfacfea61d0a2564
 organization_url_name: null
 ---
 ## はじめに
