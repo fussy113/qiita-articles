@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@increments/qiita-cli": "^0.0.19",
+    "@increments/qiita-cli": "^0.0.20",
     "markdownlint-cli2": "^0.8.1"
   }
 }
