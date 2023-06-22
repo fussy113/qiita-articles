@@ -27,7 +27,7 @@ markdownlintは、現在VSCodeの拡張機能やGitHub Actions、ESlintの拡張
 markdownlint-cli2は、[markdownlint-cli](markdownlint-cli)の後継にあたるCLIツールです。
 markdownlint-cli2は、markdownlint-cliの機能を網羅しつつ、シンプルかつ早いことを特徴としています。
 
-## markdownlit-cli2のインストール
+## markdownlint-cli2のインストール
 
 markdownlint-cli2は、npmでインストールできます。
 
