@@ -1,12 +1,12 @@
 ---
 title: GitHub Copilot Chatを使ってローカルでメモを書くのが捗った
 tags:
-  - gitHubcopilotchat
-  - githubcopilot
   - VSCode
+  - githubcopilot
+  - githubcopilotchat
 private: true
-updated_at: ''
-id: null
+updated_at: '2023-06-25T15:56:34+09:00'
+id: d46bbb87199b92dfddf1
 organization_url_name: null
 ---
 ## はじめに
