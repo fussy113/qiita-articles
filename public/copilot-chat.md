@@ -1,8 +1,8 @@
 ---
 title: GitHub Copilot Chatを使ってローカルでメモを書くのが捗った
 tags:
-  - GitHub Copilot Chat
-  - GitHub Copilot
+  - gitHubcopilotchat
+  - githubcopilot
   - VSCode
 private: true
 updated_at: ''
