@@ -5,7 +5,7 @@ tags:
   - githubcopilot
   - githubcopilotchat
 private: false
-updated_at: '2023-06-25T15:56:34+09:00'
+updated_at: '2023-06-25T15:58:53+09:00'
 id: d46bbb87199b92dfddf1
 organization_url_name: qiita-inc
 ---
