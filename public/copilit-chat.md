@@ -1,0 +1,84 @@
+---
+title: GitHub Copilot Chatを使ってローカルでメモを書くのが捗った
+tags:
+  - 'GitHub Copilot Chat'
+  - 'GitHub Copilot'
+  - 'VSCode'
+private: false
+updated_at: ''
+id: null
+organization_url_name: qiita-inc
+---
+## はじめに
+
+GitHub Copilot Chat の登録制ベータの招待がきて、ウッキウキで使ったので、紹介する記事を書きました。
+
+簡単なCopilot Chatの紹介と、実際に使ってみた感想を書いていきます。
+
+## GitHub Copilot Chat とは
+
+GitHub Copilot Chat は、GitHub Copilot のベータ版で現在提供されている機能です。
+
+## GitHub Copilot Chatの使い方
+
+### インストール
+
+- GitHub Copilot Chat の招待を受け取る
+  - [waitlist](https://github.com/github-copilot/chat_waitlist_signup/join)に登録して、招待を待ちましょう
+- VSCode の最新版をインストール/アップデート
+- VSCodeで必要な拡張機能をインストール
+  - [GitHub Copilot Nightly](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-nightly)
+  - [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)
+  - VSCode上で、GitHubにサインインする
+
+GitHub Copilot Chatが利用できるようになっています。
+
+![GitHub Copilot Chatの最初](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/166596/95a3ae41-6a5c-144f-1c7d-411d8d5384c6.png)
+
+### 使い方
+
+実際にまずは、使ってみましょう。
+フィボナッチ関数のrubyのコードを書いてみます。
+
+```ruby:fibonacci.rb
+def fibonacci(num)
+  return 1 if num <= 1
+  fibonacci(num - 1) + fibonacci(num - 2)
+end
+
+fibonacci(3)
+```
+
+右クリック > Copilot Chat > Explain this をクリックします。
+
+![ショートカット](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/166596/dbd0061f-940f-0ec5-36b8-74d0e17434f6.png)
+
+VSCodeの画面にチャットが表示され、Copilot Chatが解説をしてくれます。
+
+![Copilot Chatが回答している](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/166596/feb93b49-d34e-75f5-c6a1-aefea3320243.png)
+
+```
+選択されたコードは、Rubyのプログラムで、関数「fibonacci」を定義し、引数3で呼び出しています。 「fibonacci」関数は、フィボナッチ数列を計算するための引数「num」を1つ取ります。
+
+関数は、再帰的なアプローチを使用してフィボナッチ数列を計算します。数列の最初の2つの項は1で定義され、入力値が1以下の場合は1を返します。それ以外の場合は、関数は自身を引数「num - 1」と「num - 2」で再帰的に呼び出し、結果を足し合わせて数列の次の項を計算します。
+
+このプログラムでは、「fibonacci」関数が引数3で呼び出されており、プログラムはフィボナッチ数列の最初の3つの項を計算します。関数は、数列の最初の2つの項の合計である2を返します。
+
+全体的に、このプログラムは、Rubyでフィボナッチ数列を計算するためのシンプルで効率的な方法を提供します。ただし、無効な入力値のエラーハンドリングの追加や、非常に大きな「num」の値に対する再帰的なアプローチの最適化など、改善の余地があります。また、プログラムは、3というハードコードされた値ではなく、ユーザー入力で計算する項数を受け入れるように変更できます。
+```
+
+今開いているファイル、選択範囲をコンテキストとして、ユーザーの問いに対して、回答を返してくれます。
+
+## 使ってみての感想
+
+筆者は、勉強会やイベントのメモを書くのに、VSCodeのMarkdownプレビューを使っていました。
+想定される使い方は、開発のサポートになると思うので、少し利用の趣旨から外れているかもしれませんが、こういった使い方も便利だなと率直に感じました。
+
+用語などを書いて、調べながら書いたりするときに、これまではブラウザを開いて検索したり、コピペしたりしていました。
+Copilot Chatを使うと、VSCodeの中で検索したり、コピペすることが出来ます。
+これによって、ブラウザを開いたり、コピペしたりする手間が省けて、メモを書くのが捗るなと感じました。
+
+また、返答も速いので、ストレスを感じることはありませんでした。
+ただし、`/explain` を利用する場合だと、Copilot Chatは英語で返答されます。
+日本語で返答してくれると、もっと使いやすいなと感じました(実は日本語で返してくれる、`/explain-ja`があるのですが、ショートカットから今は選べないので、少し手間に感じました)
+しかし今後のアップデートも考えると、とても楽しみな機能です。これからもいろいろ試してみます。
