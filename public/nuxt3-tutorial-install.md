@@ -1,12 +1,12 @@
 ---
 title: Nuxt3入門 ~インストール編~
 tags:
-  - 'vue'
-  - 'nuxt'
-  - 'nuxt3'
+  - Vue.js
+  - Nuxt
+  - Nuxt3
 private: true
-updated_at: ''
-id: null
+updated_at: '2023-07-02T02:01:22+09:00'
+id: d5a64049f9113d5b3148
 organization_url_name: null
 ---
 ## はじめに
