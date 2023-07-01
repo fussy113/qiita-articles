@@ -22,8 +22,6 @@ jobs:
       - run: npm exec qiita pull
         env:
           QIITA_TOKEN: ${{ secrets.QIITA_TOKEN }}
-      - name: Make changes to pull request
-        run: date +%s > report.txt
       - uses: peter-evans/create-pull-request@v5
         with:
           commit-message: 'Sync article files'
