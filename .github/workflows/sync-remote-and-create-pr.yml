@@ -24,10 +24,11 @@ jobs:
       - run: npm exec qiita pull
         env:
           QIITA_TOKEN: ${{ secrets.QIITA_TOKEN }}
-      - run: git diff
       - uses: peter-evans/create-pull-request@v5
         with:
           commit-message: 'Sync article files'
           delete-branch: true
           title: 'Sync article files'
+          body: |
+            Sync article files from Qiita.
           reviewers: fussy113
