@@ -22,6 +22,8 @@ jobs:
           node-version: '18.16.0'
       - run: npm install
       - run: npm exec qiita pull
+        env:
+          QIITA_TOKEN: ${{ secrets.QIITA_TOKEN }}
       - uses: peter-evans/create-pull-request@v5
         with:
           commit-message: 'Sync article files'
