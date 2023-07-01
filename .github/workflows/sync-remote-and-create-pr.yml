@@ -19,6 +19,7 @@ jobs:
         with:
           node-version: '18.16.0'
       - run: npm install
+      - run: rm -rf ./public # TODO: fix pull command
       - run: npm exec qiita pull
         env:
           QIITA_TOKEN: ${{ secrets.QIITA_TOKEN }}
