@@ -6,8 +6,8 @@ tags:
   - Vue3
   - Nuxt3
 private: false
-updated_at: '2023-07-02T02:15:00+09:00'
-id: null
+updated_at: '2023-07-07T17:15:39+09:00'
+id: 0ddd2c5e5d81a6a99023
 organization_url_name: qiita-inc
 ---
 
