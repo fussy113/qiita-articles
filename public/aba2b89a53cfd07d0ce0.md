@@ -4,7 +4,7 @@ tags:
   - Vue.js
   - LIFF
 private: false
-updated_at: '2023-06-15T00:51:32+09:00'
+updated_at: '2023-07-19T21:49:41+09:00'
 id: aba2b89a53cfd07d0ce0
 organization_url_name: qiita-inc
 slide: false
@@ -84,7 +84,7 @@ yarn add @line/liff
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
   loggedIn: {{ loggedIn }}
-  {{ profile.statusMessage }}
+  {{ profile.displayName }}
 </template>
 
 <script>
