@@ -7,6 +7,7 @@ private: false
 updated_at: '2023-06-15T00:51:33+09:00'
 id: f8b94def55dedef7c06a
 organization_url_name: qiita-inc
+slide: false
 ---
 ## モチベーション
 

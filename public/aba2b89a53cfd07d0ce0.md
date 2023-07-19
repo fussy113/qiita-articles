@@ -7,6 +7,7 @@ private: false
 updated_at: '2023-06-15T00:51:32+09:00'
 id: aba2b89a53cfd07d0ce0
 organization_url_name: qiita-inc
+slide: false
 ---
 vue-cli で作成したプロジェクトに対して、 npm パッケージから liff をインストールして、使うところまでを紹介します。
 
