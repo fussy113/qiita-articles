@@ -3,8 +3,8 @@ title: Developers Meetup 急成長ベンチャーが向き合う「開発生産�
 tags:
   - 勉強会
 private: false
-updated_at: ''
-id: null
+updated_at: '2023-09-29T01:07:59+09:00'
+id: cf4f77c15e1ae50a38a6
 organization_url_name: null
 slide: false
 ignorePublish: false
