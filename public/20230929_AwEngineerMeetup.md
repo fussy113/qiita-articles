@@ -3,7 +3,7 @@ title: Developers Meetup 急成長ベンチャーが向き合う「開発生産�
 tags:
   - 勉強会
 private: false
-updated_at: '2023-09-29T01:07:59+09:00'
+updated_at: '2023-09-29T13:33:44+09:00'
 id: cf4f77c15e1ae50a38a6
 organization_url_name: null
 slide: false
@@ -15,13 +15,16 @@ ignorePublish: false
 https://anotherworks.connpass.com/event/294517/
 
 こちらにオフラインで参加してきました。
-LTで話された内容や所感をまとめています。
+LTで話されていた内容や所感をメモしていた内容とともにまとめています。
 
 ## LT
 
 ### 「レガシーフロントエンドをリプレイスしたら開発生産性が向上しました」
 
+https://speakerdeck.com/kamio/regasihurontoendowo-ripureisusitara-kai-fa-sheng-chan-xing-gaxiang-shang-simasita
+
 Next.jsにリプレイスして得られたことについて、話されていました。
+ルールとして定め、それを自動化していくことの大事さを改めて感じました。
 
 - リプレイス前の課題
   - 開発環境のキャッチアップコストが高い
@@ -86,6 +89,8 @@ Next.jsにリプレイスして得られたことについて、話されてい�
 
 ### 「開発生産性、上から見るか？下から見るか？」
 
+https://speakerdeck.com/sugamasao/development-productivity-and-cognitive-science
+
 認知科学の観点から、開発生産性について考える、興味深いアプローチ方法でした。
 自分達が何気なくやっているような改善がしっかりとどういった効果をもたらすのかを言語化しており、とても参考になりました。
 
@@ -139,3 +144,6 @@ Next.jsにリプレイスして得られたことについて、話されてい�
 
 事例をもとにした内容や、自分にない観点からのアプローチなどがあり、とても参考になりました。
 成果のために自分ができることを考えるときに、こちらの内容を参考にしたり、取り入れたりしてみたいと思います。
+
+また、オフラインの交流会もあり、スピーカーや参加者の方とコミュニケーションを取ることが出来たのは良かったです。
+どんどん参加しよ:muscle:
