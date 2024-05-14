@@ -19,7 +19,8 @@ jobs:
           ref: master
       - uses: actions/setup-node@v4
         with:
-          node-version-file: 'package.json'
+          node-version-file: ./package.json
+          cache: npm
       - run: npm install
       - run: npm exec qiita pull -- --force
         env:
