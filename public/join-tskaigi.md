@@ -1,13 +1,13 @@
 ---
 title: TSKaigi 2024参加レポート
 tags:
-  - 'TypeScript'
-  - 'TSKaigi'
-  - 'カンファレンス・勉強会メモ'
-  - 'イベントレポート'
+  - TypeScript
+  - カンファレンス・勉強会メモ
+  - イベントレポート
+  - TSKaigi
 private: false
-updated_at: ''
-id: null
+updated_at: '2024-05-15T00:12:57+09:00'
+id: aee53b2ca101c2be63fb
 organization_url_name: null
 slide: false
 ignorePublish: false
