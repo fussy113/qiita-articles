@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "volta": {
+    "node": "20.13.1",
+    "npm": "10.7.0"
+  },
   "scripts": {
     "preview": "npx qiita preview",
     "lint:md": "npx markdownlint-cli2 --config \".markdownlint-cli2.jsonc\" public/*",

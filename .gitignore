@@ -1,6 +1,5 @@
 node_modules
+.vscode/*
 .env
-.envrc
 .npmrc
-.nvmrc
 .remote
