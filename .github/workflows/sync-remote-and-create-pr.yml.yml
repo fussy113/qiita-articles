@@ -19,7 +19,7 @@ jobs:
           ref: master
       - uses: actions/setup-node@v4
         with:
-          node-version: '18.16.0'
+          node-version: '20.13.1'
       - run: npm install
       - run: npm exec qiita pull -- --force
         env:
