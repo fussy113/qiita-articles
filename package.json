@@ -19,6 +19,6 @@
     "markdownlint-cli2": "^0.12.1"
   },
   "devDependencies": {
-    "@qiita/qiita-cli": "^1.4.0"
+    "@qiita/qiita-cli": "^1.4.1"
   }
 }
