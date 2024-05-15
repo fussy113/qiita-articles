@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "markdownlint-cli2": "^0.12.1"
+    "markdownlint-cli2": "^0.13.0"
   },
   "devDependencies": {
     "@qiita/qiita-cli": "^1.4.1"
