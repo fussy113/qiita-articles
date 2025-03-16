@@ -7,16 +7,19 @@
     "node": "22.14.0",
     "npm": "11.2.0"
   },
+  "type": "module",
   "scripts": {
     "preview": "qiita preview",
     "lint:md": "markdownlint-cli2 --config \".markdownlint-cli2.jsonc\" public/*",
-    "lint:md:fix": "markdownlint-cli2 --fix --config \".markdownlint-cli2.jsonc\" public/*"
+    "lint:md:fix": "markdownlint-cli2 --fix --config \".markdownlint-cli2.jsonc\" public/*",
+    "validate": "node scripts/validator.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@qiita/qiita-cli": "^1.6.1",
+    "gray-matter": "^4.0.3",
     "markdownlint-cli2": "^0.17.2"
   }
 }
