@@ -19,3 +19,4 @@ jobs:
           node-version-file: ./package.json
       - run: npm install
       - run: npm run lint:md
+      - run: npm run validate
