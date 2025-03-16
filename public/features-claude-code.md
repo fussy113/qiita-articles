@@ -5,9 +5,9 @@ tags:
   - VSCode
   - devcontainer
   - claude
-  - ClaudeCode
+  - Claude Code
 private: false
-updated_at: '2025-03-17T02:53:29+09:00'
+updated_at: '2025-03-16T18:10:13+09:00'
 id: eba52ac807c060dce379
 organization_url_name: null
 slide: false
@@ -32,9 +32,9 @@ https://github.com/anthropics/devcontainer-features
 
 ```json:.devcontainer/devcontainer.json
 {
-  # ...他の設定の記述
+  // ...他の設定の記述
   "features": {
-    # コンテナでNode.jsをインストールしていない場合は、併せてインストールする
+    // コンテナでNode.jsをインストールしていない場合は、併せてインストールする
     "ghcr.io/devcontainers/features/node:1": {},
     "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
   }
