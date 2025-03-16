@@ -4,7 +4,7 @@ tags:
   - 'vscode'
   - 'Devcontainer'
   - 'Claude'
-  - 'Claude Code'
+  - 'ClaudeCode'
   - 'tips'
 private: false
 updated_at: ''
