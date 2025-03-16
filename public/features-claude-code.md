@@ -1,14 +1,14 @@
 ---
 title: Devcontainer で Claude Code を使う時はfeatures でインストール出来る
 tags:
-  - 'vscode'
-  - 'Devcontainer'
-  - 'Claude'
-  - 'ClaudeCode'
-  - 'tips'
+  - tips
+  - VSCode
+  - devcontainer
+  - claude
+  - ClaudeCode
 private: false
-updated_at: ''
-id: null
+updated_at: '2025-03-16T18:10:13+09:00'
+id: eba52ac807c060dce379
 organization_url_name: null
 slide: false
 ignorePublish: false
