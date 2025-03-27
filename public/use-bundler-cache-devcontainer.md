@@ -1,12 +1,12 @@
 ---
 title: RailsデフォルトのDevcontainer でBundlerキャッシュを使う
 tags:
-  - 'Rails'
-  - 'Devcontainer'
-  - 'tips'
+  - Rails
+  - tips
+  - devcontainer
 private: false
-updated_at: ''
-id: null
+updated_at: '2025-03-28T04:01:49+09:00'
+id: 0c65978956ed1812bd78
 organization_url_name: null
 slide: false
 ignorePublish: false
