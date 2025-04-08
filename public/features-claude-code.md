@@ -4,7 +4,7 @@ tags:
   - tips
   - VSCode
   - devcontainer
-  - claude
+  - Claude
   - ClaudeCode
 private: false
 updated_at: '2025-03-17T04:11:01+09:00'
