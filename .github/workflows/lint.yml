@@ -9,14 +9,11 @@ permissions:
   pull-requests: read
 
 jobs:
-  sync_remote_and_create_pr:
+  lint:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-node@v5
-        with:
-          node-version-file: ./package.json
-      - run: npm install
-      - run: npm run lint:md
-      - run: npm run validate
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - uses: ./.github/actions/setup-dependencies
+      - run: pnpm run lint:md
+      - run: pnpm run validate
