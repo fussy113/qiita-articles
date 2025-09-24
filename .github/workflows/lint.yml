@@ -17,6 +17,9 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version-file: ./package.json
-      - run: npm install
-      - run: npm run lint:md
-      - run: npm run validate
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - run: pnpm install
+      - run: pnpm run lint:md
+      - run: pnpm run validate

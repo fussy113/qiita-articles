@@ -20,8 +20,11 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version-file: ./package.json
-      - run: npm install
-      - run: npm exec qiita pull -- --force
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - run: pnpm install
+      - run: pnpm exec qiita pull -- --force
         env:
           QIITA_TOKEN: ${{ secrets.QIITA_TOKEN }}
       - uses: peter-evans/create-pull-request@v7
