@@ -9,7 +9,7 @@ permissions:
   pull-requests: read
 
 jobs:
-  sync_remote_and_create_pr:
+  lint:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
