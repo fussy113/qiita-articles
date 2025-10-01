@@ -3,3 +3,4 @@ node_modules
 .env
 .npmrc
 .remote
+.claude/settings.local.json
