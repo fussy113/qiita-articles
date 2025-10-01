@@ -2,11 +2,11 @@
 title: GitHub上でDependabotを手動実行する方法
 tags:
   - GitHub
-  - Dependabot
   - tips
+  - dependabot
 private: false
-updated_at: ''
-id: null
+updated_at: '2025-10-01T22:50:38+09:00'
+id: be0a2540a5e1da9adfea
 organization_url_name: null
 slide: false
 ignorePublish: false
