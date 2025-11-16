@@ -1,6 +1,7 @@
 node_modules
 .vscode/*
 .env
+.envrc
 .npmrc
 .remote
 .claude/settings.local.json
