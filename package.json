@@ -19,6 +19,7 @@
     "preview": "qiita preview",
     "lint:md": "markdownlint-cli2 --config \".markdownlint-cli2.jsonc\" public/*",
     "lint:md:fix": "markdownlint-cli2 --fix --config \".markdownlint-cli2.jsonc\" public/*",
+    "lint:text": "textlint",
     "validate": "node scripts/validator.js"
   },
   "keywords": [],
