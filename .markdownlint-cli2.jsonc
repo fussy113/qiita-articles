@@ -7,8 +7,8 @@
     "no-inline-html": false, // MD033: HTML記述を許容
     "no-bare-urls": false, // MD034: URLそのままの表記を許容
     "fenced-code-language": false, // MD040: コードブロックの言語指定を許容
-    "table-column-style": { // MD600: テーブル記法
-      "aligned_delimiter": true,
+    "table-column-style": { // MD060: テーブル記法
+      "aligned_delimiter": false,
       "style": "compact"
     }
   },
