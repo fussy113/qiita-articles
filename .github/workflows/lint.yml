@@ -1,4 +1,4 @@
-name: Run markdownlint
+name: Run linters
 
 on:
   pull_request:
@@ -17,3 +17,11 @@ jobs:
       - uses: ./.github/actions/setup-dependencies
       - run: pnpm run lint:md
       - run: pnpm run validate
+      - name: Get changed markdown files
+        id: changed-files
+        uses: tj-actions/changed-files@e0021407031f5be11a464abee9a0776171c79891 # v47.0.1
+        with:
+          files: 'public/**/*.md'
+      - name: Run textlint on changed files
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: pnpm run lint:text ${{ steps.changed-files.outputs.all_changed_files }}
