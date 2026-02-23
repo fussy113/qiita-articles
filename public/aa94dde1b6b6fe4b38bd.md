@@ -18,8 +18,8 @@ GitHubのPR一覧の画面で、フィルターを使って期間を絞ること
 
 ## GitHub のPR一覧の画面から出来ないか
 
-Author(PRの作者)でフィルターすることができるので、これが使えないかと考えた。
-しかし、Authorでのフィルターは、複数を指定することができないため、複数のBotがPRを作成しているようなリポジトリでは、期待する形にならなかった。無念。
+Author(PRの作者)でフィルターできるので、これが使えないかと考えた。
+しかし、Authorでのフィルターは、複数を指定できないため、複数のBotがPRを作成しているようなリポジトリでは、期待する形にならなかった。無念。
 
 ## ghコマンドで出来ないか
 
@@ -28,11 +28,13 @@ GitHub CLI（`gh`コマンド）を使えば、より柔軟にPRを取得・フ�
 ### JSON出力とjqを組み合わせる
 
 `gh pr list`には`--json`オプションがあり、指定したフィールドをJSON形式で出力できる。これと`jq`コマンドを組み合わせることで、柔軟なフィルタリングが可能になる。
+
 ```bash
 gh pr list --state all --limit 100 --json number,title,author,mergedAt
 ```
 
 出力例：
+
 ```json
 [
   {
@@ -59,6 +61,7 @@ gh pr list --state all --limit 100 --json number,title,author,mergedAt
 ### Botを除外するフィルタリング
 
 `author`オブジェクトには`is_bot`フィールドが含まれているので、これを使えば簡単にBotを除外できる。
+
 ```bash
 gh pr list --state all --limit 100 --json number,title,author,mergedAt \
   | jq '[.[] | select(.author.is_bot == false)]'
@@ -68,7 +71,7 @@ Bot名を個別に指定する必要がなく、新しいBotが追加されて�
 
 ### 期間を絞り込む
 
-マージ日時で期間を絞り込める
+マージ日時で期間を絞り込める。
 
 ```bash
 gh pr list --state merged --limit 300 --json number,title,author,mergedAt,url \

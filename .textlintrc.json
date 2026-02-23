@@ -2,7 +2,10 @@
   "rules": {
     "preset-ja-technical-writing": {
       "max": 120,
-      "no-mix-dearu-desumasu": false
+      "no-mix-dearu-desumasu": false,
+      "ja-no-mixed-period": {
+        "allowPeriodMarks": ["："]
+      }
     },
     "textlint-rule-preset-ai-writing": true
   }
