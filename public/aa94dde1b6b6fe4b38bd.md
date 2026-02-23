@@ -28,11 +28,13 @@ GitHub CLI（`gh`コマンド）を使えば、より柔軟にPRを取得・フ�
 ### JSON出力とjqを組み合わせる
 
 `gh pr list`には`--json`オプションがあり、指定したフィールドをJSON形式で出力できる。これと`jq`コマンドを組み合わせることで、柔軟なフィルタリングが可能になる。
+
 ```bash
 gh pr list --state all --limit 100 --json number,title,author,mergedAt
 ```
 
 出力例：
+
 ```json
 [
   {
@@ -59,6 +61,7 @@ gh pr list --state all --limit 100 --json number,title,author,mergedAt
 ### Botを除外するフィルタリング
 
 `author`オブジェクトには`is_bot`フィールドが含まれているので、これを使えば簡単にBotを除外できる。
+
 ```bash
 gh pr list --state all --limit 100 --json number,title,author,mergedAt \
   | jq '[.[] | select(.author.is_bot == false)]'
