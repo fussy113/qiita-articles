@@ -3,16 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "packageManager": "pnpm@10.17.1",
-  "engines": {
-    "node": ">=24.0.0",
-    "npm": "use pnpm instead",
-    "yarn": "use pnpm instead",
-    "pnpm": ">=10.0.0"
-  },
-  "volta": {
-    "node": "24.8.0",
-    "pnpm": "10.17.1"
+  "packageManager": "pnpm@11.5.1",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^24",
+      "onFail": "error"
+    }
   },
   "type": "module",
   "scripts": {
