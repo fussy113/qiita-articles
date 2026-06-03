@@ -1,12 +1,38 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
-  "enabledManagers": ["npm", "github-actions"],
+  "extends": ["config:recommended", "schedule:weekly"],
+  "timezone": "Asia/Tokyo",
+  "enabledManagers": ["npm", "github-actions", "mise"],
+  "labels": ["dependencies"],
+  "osvVulnerabilityAlerts": true,
+  "minimumReleaseAge": "3 days",
+  "internalChecksFilter": "strict",
   "packageRules": [
     {
       "description": "CI 通過後に minor/patch/pin/digest を自動マージ",
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
+    },
+    {
+      "description": "node は LTS のみ（node versioning が奇数=unstable を除外）",
+      "matchDatasources": ["node-version"],
+      "matchPackageNames": ["node"],
+      "versioning": "node"
+    },
+    {
+      "description": "pnpm を mise.toml と packageManager でまとめて更新",
+      "matchPackageNames": ["pnpm"],
+      "groupName": "pnpm"
+    },
+    {
+      "description": "GitHub Actions をまとめて更新",
+      "matchManagers": ["github-actions"],
+      "groupName": "github-actions"
+    },
+    {
+      "description": "textlint 関連パッケージをまとめて更新",
+      "matchPackageNames": ["/^textlint/"],
+      "groupName": "textlint"
     }
   ]
 }
