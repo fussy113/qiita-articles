@@ -2,7 +2,8 @@ name: Check Qiita token
 
 on:
   schedule:
-    - cron: '30 21 * * *' # 6:30 JST（sync の30分前）
+    - cron: '30 6 * * *' # 6:30 JST（sync の30分前）
+      timezone: 'Asia/Tokyo'
   pull_request:
     paths:
       - .github/workflows/check-qiita-token.yml
