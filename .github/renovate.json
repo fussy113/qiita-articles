@@ -26,7 +26,7 @@
       "versioning": "node"
     },
     {
-      "description": "pnpm を mise.toml と packageManager でまとめて更新",
+      "description": "pnpm を mise.toml で単一ソース管理（更新をまとめる）",
       "matchPackageNames": ["pnpm"],
       "groupName": "pnpm"
     },
