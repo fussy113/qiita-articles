@@ -26,8 +26,8 @@ jobs:
           fi
           status=$(curl -sS -o /dev/null -w '%{http_code}' \
             -H "Authorization: Bearer ${QIITA_TOKEN}" \
-            https://qiita.com/api/v2/authenticated_user)
-          if [ "$status" -ne 200 ]; then
+            https://qiita.com/api/v2/authenticated_user) || status="000"
+          if [ "$status" != "200" ]; then
             echo "::error::Qiita トークンチェック失敗 (HTTP ${status})。"
             echo "::error::https://qiita.com/settings/applications で read_qiita スコープ付きトークンを再発行し、Secrets の QIITA_TOKEN を更新してください。"
             exit 1
