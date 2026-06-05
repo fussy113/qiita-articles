@@ -5,6 +5,12 @@
   "enabledManagers": ["npm", "github-actions", "mise"],
   "labels": ["dependencies"],
   "osvVulnerabilityAlerts": true,
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "automerge": true,
+    "minimumReleaseAge": null
+  },
+  "transitiveRemediation": true,
   "minimumReleaseAge": "3 days",
   "internalChecksFilter": "strict",
   "packageRules": [
