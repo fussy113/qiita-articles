@@ -1,0 +1,32 @@
+name: Check Qiita token
+
+on:
+  schedule:
+    - cron: '30 21 * * *' # 6:30 JST（sync の30分前）
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check_qiita_token:
+    runs-on: ubuntu-slim # 1 vCPU 軽量ランナー（public preview）。不安定なら ubuntu-latest に戻す
+    timeout-minutes: 5
+    steps:
+      - name: Check Qiita token validity
+        env:
+          QIITA_TOKEN: ${{ secrets.QIITA_TOKEN }}
+        run: |
+          if [ -z "$QIITA_TOKEN" ]; then
+            echo "::error::QIITA_TOKEN secret が未設定です。"
+            exit 1
+          fi
+          status=$(curl -sS -o /dev/null -w '%{http_code}' \
+            -H "Authorization: Bearer ${QIITA_TOKEN}" \
+            https://qiita.com/api/v2/authenticated_user)
+          if [ "$status" -ne 200 ]; then
+            echo "::error::Qiita トークンチェック失敗 (HTTP ${status})。"
+            echo "::error::https://qiita.com/settings/applications で read_qiita スコープ付きトークンを再発行し、Secrets の QIITA_TOKEN を更新してください。"
+            exit 1
+          fi
+          echo "Qiita トークンは有効です (HTTP 200)。"
