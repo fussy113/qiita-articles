@@ -24,7 +24,7 @@
   "devDependencies": {
     "@qiita/qiita-cli": "^1.8.0",
     "gray-matter": "^4.0.3",
-    "markdownlint-cli2": "^0.22.1",
+    "markdownlint-cli2": "^0.23.0",
     "js-yaml": "^4.2.0",
     "textlint": "^15.7.1",
     "textlint-rule-preset-ai-writing": "^1.1.0",
