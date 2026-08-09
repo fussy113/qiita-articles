@@ -16,7 +16,7 @@ importers:
         version: 4.0.3
       js-yaml:
         specifier: ^5.0.0
-        version: 5.2.2
+        version: 5.2.3
       markdownlint-cli2:
         specifier: ^0.23.0
         version: 0.23.2(supports-color@7.2.0)
@@ -1074,6 +1074,10 @@ packages:
 
   js-yaml@5.2.2:
     resolution: {integrity: sha512-dayzUzKkJ1MkuUtZglSebU43utNXH0OWQByK9rKOOuYIO8M5TV1y+n8ALMdG0rdzBnfNkOmZEqrURepb0ejqBw==}
+    hasBin: true
+
+  js-yaml@5.2.3:
+    resolution: {integrity: sha512-n+mUVyUX5bVv7G/G2zyIHOhdxfuU1dY2NOFzTQUWiMUbFss8b57NFlgCCaggU78wSw5KVS9cllzeLyzyR+n5nw==}
     hasBin: true
 
   json-schema-traverse@1.0.0:
@@ -3251,6 +3255,10 @@ snapshots:
       argparse: 2.0.1
 
   js-yaml@5.2.2:
+    dependencies:
+      argparse: 2.0.1
+
+  js-yaml@5.2.3:
     dependencies:
       argparse: 2.0.1
 
