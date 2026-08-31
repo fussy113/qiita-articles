@@ -10,6 +10,8 @@ id: 0c65978956ed1812bd78
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 
 Rails newする時、`--devcontainer` オプションを指定することで、Devcontainer を使った開発環境を構築することができます。
