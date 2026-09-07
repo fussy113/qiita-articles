@@ -12,6 +12,8 @@ id: eba52ac807c060dce379
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: 3173172074bd59848652
+agreed_posting_campaign_term: true
 ---
 
 Claude Code はNode.jsで動かすことができ、以下のようなコマンドでインストールできます。
