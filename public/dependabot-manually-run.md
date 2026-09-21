@@ -10,6 +10,8 @@ id: be0a2540a5e1da9adfea
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 
 Dependabotは定期的に依存関係の更新をチェックしてPRを作成してくれますが、設定変更後やすぐに更新を確認したい場合など、手動で実行したいことがある。
