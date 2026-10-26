@@ -9,6 +9,8 @@ id: f8b94def55dedef7c06a
 organization_url_name: qiita-inc
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 ## モチベーション
 
