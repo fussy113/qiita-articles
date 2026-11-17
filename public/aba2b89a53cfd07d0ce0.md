@@ -9,6 +9,8 @@ id: aba2b89a53cfd07d0ce0
 organization_url_name: qiita-inc
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 vue-cli で作成したプロジェクトに対して、 npm パッケージから liff をインストールして、使うところまでを紹介します。
 
